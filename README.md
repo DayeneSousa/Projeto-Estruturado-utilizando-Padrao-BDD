@@ -1,4 +1,4 @@
-# Projeto Estruturado utilizando o sistema para teste OrangeHRM (Sistema de RH)
+# Projeto Estruturado utilizando Padrão BDD 
 
 <table>
 <tr>
