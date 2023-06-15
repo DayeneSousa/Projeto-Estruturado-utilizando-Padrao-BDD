@@ -18,7 +18,7 @@ https://github.com/DayeneSousa/Projeto-Estruturado-Robot/assets/123768685/e7c7a6
 <tr>
 <td>
 Tive como base os ensinamentos de Bianca Campos.
- https://opensource-demo.orangehrmlive.com/web/index.php/auth/login](https://www.youtube.com/watch?v=_pQT3-YvSTg)
+https://www.youtube.com/watch?v=0JyalsVaXWY
 
 </td>
 </tr>
