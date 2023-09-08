@@ -1,174 +1,270 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230826 15:13:28.791" rpa="false" schemaversion="3">
-<suite id="s1" name="Cadastro" source="C:\Users\Dayen\OneDrive\Área de Trabalho\Testes Automatizados\Sistema de RH\suites\cadastro">
-<suite id="s1-s1" name="Cadastrofuncionario" source="C:\Users\Dayen\OneDrive\Área de Trabalho\Testes Automatizados\Sistema de RH\suites\cadastro\cadastrofuncionario.robot">
-<test id="s1-s1-t1" name="1- Cenario de teste: Cadastro de Funcionário" line="51">
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230906 11:07:28.092" rpa="false" schemaversion="3">
+<suite id="s1" name="Usuarios" source="C:\Users\Dayen\OneDrive\Área de Trabalho\Testes Automatizados\Sistema de RH\suites\usuarios">
+<suite id="s1-s1" name="Multiplos Usuarios" source="C:\Users\Dayen\OneDrive\Área de Trabalho\Testes Automatizados\Sistema de RH\suites\usuarios\multiplos_usuarios.robot">
+<test id="s1-s1-t1" name="TC01- Cenario de teste: Cadastro de Funcionário" line="49">
 <kw name="Acessar o site e Logar" library="setup_teardoown" type="SETUP">
 <kw name="Dado que acesse o RangerRH" library="login_page">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230826 15:13:29.012" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<status status="PASS" starttime="20230826 15:13:29.011" endtime="20230826 15:13:34.832"/>
+<msg timestamp="20230906 11:07:28.317" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230906 11:07:28.317" endtime="20230906 11:07:32.227"/>
 </kw>
-<status status="PASS" starttime="20230826 15:13:29.011" endtime="20230826 15:13:34.832"/>
+<status status="PASS" starttime="20230906 11:07:28.317" endtime="20230906 11:07:32.228"/>
 </kw>
 <kw name="E Realize o Login" library="login_page">
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230826 15:13:39.832" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230826 15:13:34.832" endtime="20230826 15:13:39.832"/>
+<msg timestamp="20230906 11:07:37.228" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230906 11:07:32.228" endtime="20230906 11:07:37.228"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${input_nome}</arg>
 <arg>Admin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230826 15:13:39.833" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
-<msg timestamp="20230826 15:13:39.837" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=116.0.5845.111)
-Stacktrace:
-	GetHandleVerifier [0x00007FF67D7D52A2+57122]
-	(No symbol) [0x00007FF67D74EA92]
-	(No symbol) [0x00007FF67D61E3AB]
-	(No symbol) [0x00007FF67D5FE1B9]
-	(No symbol) [0x00007FF67D67B417]
-	(No symbol) [0x00007FF67D68E24F]
-	(No symbol) [0x00007FF67D676DB3]
-	(No symbol) [0x00007FF67D64D2B1]
-	(No symbol) [0x00007FF67D64E494]
-	GetHandleVerifier [0x00007FF67DA7EF82+2849794]
-	GetHandleVerifier [0x00007FF67DAD1D24+3189156]
-	GetHandleVerifier [0x00007FF67DACACAF+3160367]
-	GetHandleVerifier [0x00007FF67D866D06+653702]
-	(No symbol) [0x00007FF67D75A208]
-	(No symbol) [0x00007FF67D7562C4]
-	(No symbol) [0x00007FF67D7563F6]
-	(No symbol) [0x00007FF67D7467A3]
-	BaseThreadInitThunk [0x00007FFB73D626AD+29]
-	RtlUserThreadStart [0x00007FFB7560AA68+40]
-</msg>
-<msg timestamp="20230826 15:13:39.841" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=116.0.5845.111)
-Stacktrace:
-	GetHandleVerifier [0x00007FF67D7D52A2+57122]
-	(No symbol) [0x00007FF67D74EA92]
-	(No symbol) [0x00007FF67D61E3AB]
-	(No symbol) [0x00007FF67D5FE1B9]
-	(No symbol) [0x00007FF67D67B417]
-	(No symbol) [0x00007FF67D68E24F]
-	(No symbol) [0x00007FF67D676DB3]
-	(No symbol) [0x00007FF67D64D2B1]
-	(No symbol) [0x00007FF67D64E494]
-	GetHandleVerifier [0x00007FF67DA7EF82+2849794]
-	GetHandleVerifier [0x00007FF67DAD1D24+3189156]
-	GetHandleVerifier [0x00007FF67DACACAF+3160367]
-	GetHandleVerifier [0x00007FF67D866D06+653702]
-	(No symbol) [0x00007FF67D75A208]
-	(No symbol) [0x00007FF67D7562C4]
-	(No symbol) [0x00007FF67D7563F6]
-	(No symbol) [0x00007FF67D7467A3]
-	BaseThreadInitThunk [0x00007FFB73D626AD+29]
-	RtlUserThreadStart [0x00007FFB7560AA68+40]
-</msg>
-<status status="FAIL" starttime="20230826 15:13:39.832" endtime="20230826 15:13:39.899"/>
+<msg timestamp="20230906 11:07:37.230" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20230906 11:07:37.228" endtime="20230906 11:07:37.325"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${input_senha}</arg>
 <arg>admin123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230826 15:13:39.899" endtime="20230826 15:13:39.899"/>
+<msg timestamp="20230906 11:07:37.326" level="INFO">Typing text 'admin123' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20230906 11:07:37.325" endtime="20230906 11:07:37.392"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//button[contains(.,'Login')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20230826 15:13:39.899" endtime="20230826 15:13:39.899"/>
+<status status="PASS" starttime="20230906 11:07:37.393" endtime="20230906 11:07:37.414"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${input_botão}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230826 15:13:39.899" endtime="20230826 15:13:39.900"/>
+<msg timestamp="20230906 11:07:37.415" level="INFO">Clicking element '//button[contains(.,'Login')]'.</msg>
+<status status="PASS" starttime="20230906 11:07:37.415" endtime="20230906 11:07:37.446"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20230826 15:13:39.900" endtime="20230826 15:13:39.900"/>
+<msg timestamp="20230906 11:07:42.447" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230906 11:07:37.446" endtime="20230906 11:07:42.447"/>
 </kw>
-<status status="FAIL" starttime="20230826 15:13:34.832" endtime="20230826 15:13:39.900"/>
+<status status="PASS" starttime="20230906 11:07:32.228" endtime="20230906 11:07:42.447"/>
 </kw>
 <kw name="Então, a pagina inicial de Dashboard sera exibida" library="login_page">
-<status status="NOT RUN" starttime="20230826 15:13:39.900" endtime="20230826 15:13:39.900"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230906 11:07:42.448" endtime="20230906 11:07:42.573"/>
 </kw>
-<status status="FAIL" starttime="20230826 15:13:29.011" endtime="20230826 15:13:39.900"/>
+<status status="PASS" starttime="20230906 11:07:42.448" endtime="20230906 11:07:42.574"/>
 </kw>
-<status status="FAIL" starttime="20230826 15:13:29.010" endtime="20230826 15:13:39.901">Setup failed:
-NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=116.0.5845.111)
-Stacktrace:
-	GetHandleVerifier [0x00007FF67D7D52A2+57122]
-	(No symbol) [0x00007FF67D74EA92]
-	(No symbol) [0x00007FF67D61E3AB]
-	(No symbol) [0x00007FF67D5FE1B9]
-	(No symbol) [0x00007FF67D67B417]
-	(No symbol) [0x00007FF67D68E24F]
-	(No symbol) [0x00007FF67D676DB3]
-	(No symbol) [0x00007FF67D64D2B1]
-	(No symbol) [0x00007FF67D64E494]
-	GetHandleVerifier [0x00007FF67DA7EF82+2849794]
-	GetHandleVerifier [0x00007FF67DAD1D24+3189156]
-	GetHandleVerifier [0x00007FF67DACACAF+3160367]
-	GetHandleVerifier [0x00007FF67D866D06+653702]
-	(No symbol) [0x00007FF67D75A208]
-	(No symbol) [0x00007FF67D7562C4]
-	(No symbol) [0x00007FF67D7563F6]
-	(No symbol) [0x00007FF67D7467A3]
-	BaseThreadInitThunk [0x00007FFB73D626AD+29]
-	RtlUserThreadStart [0x00007FFB7560AA68+40]
-</status>
+<status status="PASS" starttime="20230906 11:07:28.317" endtime="20230906 11:07:42.574"/>
+</kw>
+<kw name="Dado que eu acesse a opção PIM, no menu">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[contains(.,'PIM')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:07:42.577" endtime="20230906 11:07:42.618"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(.,'PIM')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:07:42.620" level="INFO">Clicking element '//span[contains(.,'PIM')]'.</msg>
+<status status="PASS" starttime="20230906 11:07:42.618" endtime="20230906 11:07:43.433"/>
+</kw>
+<status status="PASS" starttime="20230906 11:07:42.576" endtime="20230906 11:07:43.433"/>
+</kw>
+<kw name="E clico Add Employee">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[contains(.,'Add Employee')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:07:43.434" endtime="20230906 11:07:43.908"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[contains(.,'Add Employee')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:07:43.909" level="INFO">Clicking element '//a[contains(.,'Add Employee')]'.</msg>
+<status status="PASS" starttime="20230906 11:07:43.908" endtime="20230906 11:07:44.761"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:07:49.761" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230906 11:07:44.761" endtime="20230906 11:07:49.761"/>
+</kw>
+<status status="PASS" starttime="20230906 11:07:43.434" endtime="20230906 11:07:49.761"/>
+</kw>
+<kw name="Então,adiciono 2 novos usuários">
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>2</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name="firstName"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:07:49.763" endtime="20230906 11:07:49.793"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_nomefuncionario}</arg>
+<arg>Dayene</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:07:49.794" level="INFO">Typing text 'Dayene' into text field '//input[@name="firstName"]'.</msg>
+<status status="PASS" starttime="20230906 11:07:49.793" endtime="20230906 11:07:49.865"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:07:54.866" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230906 11:07:49.865" endtime="20230906 11:07:54.866"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_segundonome}</arg>
+<arg>Vanessa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:07:54.867" level="INFO">Typing text 'Vanessa' into text field '//input[@name="middleName"]'.</msg>
+<status status="PASS" starttime="20230906 11:07:54.866" endtime="20230906 11:07:54.957"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_sobrenome}</arg>
+<arg>Sousa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:07:54.958" level="INFO">Typing text 'Sousa' into text field '//input[@name="lastName"]'.</msg>
+<status status="PASS" starttime="20230906 11:07:54.958" endtime="20230906 11:07:55.030"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:08:00.031" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230906 11:07:55.030" endtime="20230906 11:08:00.031"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${submit_save}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:08:00.032" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20230906 11:08:00.031" endtime="20230906 11:08:00.082"/>
+</kw>
+<kw name="E clico Add Employee">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[contains(.,'Add Employee')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:08:00.083" endtime="20230906 11:08:00.098"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[contains(.,'Add Employee')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:08:00.099" level="INFO">Clicking element '//a[contains(.,'Add Employee')]'.</msg>
+<status status="PASS" starttime="20230906 11:08:00.098" endtime="20230906 11:08:00.577"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:08:05.578" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230906 11:08:00.577" endtime="20230906 11:08:05.578"/>
+</kw>
+<status status="PASS" starttime="20230906 11:08:00.082" endtime="20230906 11:08:05.578"/>
+</kw>
+<status status="PASS" starttime="20230906 11:07:49.763" endtime="20230906 11:08:05.578"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name="firstName"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:08:05.579" endtime="20230906 11:08:05.609"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_nomefuncionario}</arg>
+<arg>Dayene</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:08:05.609" level="INFO">Typing text 'Dayene' into text field '//input[@name="firstName"]'.</msg>
+<status status="PASS" starttime="20230906 11:08:05.609" endtime="20230906 11:08:05.677"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:08:10.678" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230906 11:08:05.677" endtime="20230906 11:08:10.678"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_segundonome}</arg>
+<arg>Vanessa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:08:10.679" level="INFO">Typing text 'Vanessa' into text field '//input[@name="middleName"]'.</msg>
+<status status="PASS" starttime="20230906 11:08:10.678" endtime="20230906 11:08:10.767"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_sobrenome}</arg>
+<arg>Sousa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:08:10.768" level="INFO">Typing text 'Sousa' into text field '//input[@name="lastName"]'.</msg>
+<status status="PASS" starttime="20230906 11:08:10.767" endtime="20230906 11:08:10.831"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:08:15.831" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230906 11:08:10.831" endtime="20230906 11:08:15.831"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${submit_save}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:08:15.832" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20230906 11:08:15.831" endtime="20230906 11:08:15.874"/>
+</kw>
+<kw name="E clico Add Employee">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[contains(.,'Add Employee')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:08:15.874" endtime="20230906 11:08:15.888"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[contains(.,'Add Employee')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:08:15.889" level="INFO">Clicking element '//a[contains(.,'Add Employee')]'.</msg>
+<status status="PASS" starttime="20230906 11:08:15.888" endtime="20230906 11:08:16.454"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:08:21.454" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230906 11:08:16.454" endtime="20230906 11:08:21.454"/>
+</kw>
+<status status="PASS" starttime="20230906 11:08:15.874" endtime="20230906 11:08:21.455"/>
+</kw>
+<status status="PASS" starttime="20230906 11:08:05.578" endtime="20230906 11:08:21.455"/>
+</iter>
+<status status="PASS" starttime="20230906 11:07:49.763" endtime="20230906 11:08:21.455"/>
+</for>
+<status status="PASS" starttime="20230906 11:07:49.762" endtime="20230906 11:08:21.455"/>
+</kw>
+<kw name="Fechar Sistema">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230906 11:08:21.457" endtime="20230906 11:08:23.731"/>
+</kw>
+<status status="PASS" starttime="20230906 11:08:21.456" endtime="20230906 11:08:23.732"/>
+</kw>
+<status status="PASS" starttime="20230906 11:07:28.316" endtime="20230906 11:08:23.733"/>
 </test>
-<status status="FAIL" starttime="20230826 15:13:28.812" endtime="20230826 15:13:39.905"/>
+<status status="PASS" starttime="20230906 11:07:28.113" endtime="20230906 11:08:23.738"/>
 </suite>
-<status status="FAIL" starttime="20230826 15:13:28.792" endtime="20230826 15:13:39.907"/>
+<status status="PASS" starttime="20230906 11:07:28.093" endtime="20230906 11:08:23.751"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Cadastro">Cadastro</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Cadastrofuncionario">Cadastro.Cadastrofuncionario</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Usuarios">Usuarios</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Multiplos Usuarios">Usuarios.Multiplos Usuarios</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230826 15:13:39.837" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=116.0.5845.111)
-Stacktrace:
-	GetHandleVerifier [0x00007FF67D7D52A2+57122]
-	(No symbol) [0x00007FF67D74EA92]
-	(No symbol) [0x00007FF67D61E3AB]
-	(No symbol) [0x00007FF67D5FE1B9]
-	(No symbol) [0x00007FF67D67B417]
-	(No symbol) [0x00007FF67D68E24F]
-	(No symbol) [0x00007FF67D676DB3]
-	(No symbol) [0x00007FF67D64D2B1]
-	(No symbol) [0x00007FF67D64E494]
-	GetHandleVerifier [0x00007FF67DA7EF82+2849794]
-	GetHandleVerifier [0x00007FF67DAD1D24+3189156]
-	GetHandleVerifier [0x00007FF67DACACAF+3160367]
-	GetHandleVerifier [0x00007FF67D866D06+653702]
-	(No symbol) [0x00007FF67D75A208]
-	(No symbol) [0x00007FF67D7562C4]
-	(No symbol) [0x00007FF67D7563F6]
-	(No symbol) [0x00007FF67D7467A3]
-	BaseThreadInitThunk [0x00007FFB73D626AD+29]
-	RtlUserThreadStart [0x00007FFB7560AA68+40]
-</msg>
 </errors>
 </robot>
