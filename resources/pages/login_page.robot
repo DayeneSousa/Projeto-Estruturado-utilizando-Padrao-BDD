@@ -16,12 +16,12 @@ Dado que acesse o RangerRH
     Open Browser   ${URL}    ${browser}
 
 E Realize o Login
-    Sleep    5s
+    Sleep    2s
     Input Text      ${input_nome}      Admin           
     Input Text      ${input_senha}     admin123
     Wait Until Element Is Visible       //button[contains(.,'Login')] 
     Click Element                       ${input_botão}
-    Sleep    5s
+    Sleep    2s
 
 Então, a pagina inicial de Dashboard sera exibida
     Maximize Browser Window

@@ -11,6 +11,7 @@ ${input_segundonome}            //input[@name="middleName"]
 ${input_sobrenome}              //input[@name="lastName"]
 ${submit_save}                  //*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]
 ${lista_link}                    //a[contains(.,'Employee List')]
+
                
 
 *** Keywords ***
@@ -22,25 +23,30 @@ Dado que eu acesse a opção PIM, no menu
 
 E clico Add Employee 
     Wait Until Element Is Visible    //a[contains(.,'Add Employee')]
-    Click Element    //a[contains(.,'Add Employee')]
-    Sleep     5s
+    Click Element                   //a[contains(.,'Add Employee')]
+    Sleep     2s
     
 E adiciono 2 novos usuários
     FOR    ${i}   IN RANGE   2  
         Wait Until Element Is Visible                         //input[@name="firstName"] 
         Input Text       ${input_nomefuncionario}             Dayene
-        Sleep            5s
+        Sleep            3s
         Input Text       ${input_segundonome}                 Vanessa
         Input Text       ${input_sobrenome}                   Sousa
-        Sleep            5s
+        Sleep            3s
         Click Element    ${submit_save}
     
         E clico Add Employee 
     END
 
 Então, confirmo os novos usuarios na lista 
-    Click Element       ${lista_link} 
-    Capture Element Screenshot      
+    Wait Until Element Is Visible           ${lista_link} 
+    Click Element                           ${lista_link}
+    Sleep       3s 
+    Click Element                             //*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[4]/nav/ul/li[3]/button
+    Sleep       3s 
+    Capture Element Screenshot               //*[@id="app"]/div[1]/div[2]           
+       
 
 Fechar Sistema
     Close Browser
