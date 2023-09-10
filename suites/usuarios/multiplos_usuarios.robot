@@ -26,10 +26,10 @@ E clico Add Employee
     Click Element                   //a[contains(.,'Add Employee')]
     Sleep     2s
     
-E adiciono 2 novos usuários
-    FOR    ${i}   IN RANGE   2  
+E adiciono ${quantidade} novos usuários
+    FOR    ${i}   IN RANGE   ${quantidade}  
         Wait Until Element Is Visible                         //input[@name="firstName"] 
-        Input Text       ${input_nomefuncionario}             Dayene
+        Input Text       ${input_nomefuncionario}             Dayene ${i}
         Sleep            3s
         Input Text       ${input_segundonome}                 Vanessa
         Input Text       ${input_sobrenome}                   Sousa
@@ -58,7 +58,7 @@ TC01- Cenario de teste: Cadastro de Funcionário
 
     Dado que eu acesse a opção PIM, no menu
     E clico Add Employee
-    E adiciono 2 novos usuários
+    E adiciono 5 novos usuários
     Então, confirmo os novos usuarios na lista
     Fechar Sistema
 
